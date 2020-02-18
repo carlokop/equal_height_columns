@@ -1,0 +1,27 @@
+<div class="row" id="equalHeightRow">
+    <div class="col-4 equalHeight">
+       content
+       <footer class="articleFooter"></footer>
+    </div>
+    <div class="col-4 equalHeight">
+        content
+       <footer class="articleFooter"></footer>
+    </div>
+    <div class="col-4 equalHeight">
+        content
+       <footer class="articleFooter"></footer>
+    </div>
+</div>
+
+<script src="equalHeight.js"></script>
+<script>
+    //initialize
+    const initEqualHeight = () =>  {
+        if(document.getElementById("equalHeightRow")){
+            const equalHeightClassInit = new equalHeightClass("equalHeightRow");
+            equalHeightClassInit.setColsSameHeightFooter();
+        }
+    }
+    window.addEventListener('load', initEqualHeight);
+    window.addEventListener('resize', initEqualHeight);
+</script>
